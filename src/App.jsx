@@ -305,6 +305,17 @@ function App() {
           </div>
         </div>
       </footer>
+
+         <a
+  href="https://wa.me/5511919223489"
+  className="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  🟡 Atendimento
+</a>
+    
+
     </div>
   )
 }
