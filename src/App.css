@@ -160,10 +160,11 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
+  color: #1a2332;
 }
 
 .hero-title .highlight {
-  color: #ffd700;
+  color: #0056d6;
 }
 
 .hero-subtitle {
@@ -172,6 +173,7 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease 0.3s forwards;
+  color: #000;
 }
 
 .hero-cta {
@@ -646,4 +648,25 @@ html {
 .section-title.animate-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  background-color: #107da8;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #016ca2;
 }
