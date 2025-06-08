@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/truck-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TransBrasil - Transportadora brasileira conectando o Brasil com agilidade e segurança. Soluções completas em transporte rodoviário." />
+    <meta name="keywords" content="transportadora, transporte rodoviário, logística, Brasil, frota própria, rastreamento" />
+    <meta name="author" content="TransBrasil" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://transbrasil.com.br/" />
+    <meta property="og:title" content="TransBrasil - Conectando o Brasil com agilidade e segurança" />
+    <meta property="og:description" content="Soluções completas em transporte rodoviário para todo o território nacional" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://transbrasil.com.br/" />
+    <meta property="twitter:title" content="TransBrasil - Conectando o Brasil com agilidade e segurança" />
+    <meta property="twitter:description" content="Soluções completas em transporte rodoviário para todo o território nacional" />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <!-- Preconnect para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>TransBrasil - Transportadora | Conectando o Brasil</title>
+    
+    <style>
+      /* Loading screen styles */
+    /*   #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1a2332;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      } */
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 215, 0, 0.3);
+        border-top: 3px solid #ffd700;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #ffd700;
+        margin-top: 20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+      }
+      
+      /* Hide loading screen when page is loaded */
+      .loaded #loading-screen {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div style="text-align: center;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Carregando TransBrasil...</div>
+      </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="root"></div>
+    
+    <!-- Vite Script -->
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Loading Script -->
+    <script>
+      window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
